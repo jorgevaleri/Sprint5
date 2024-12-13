@@ -1,0 +1,86 @@
+<body>
+  <h1>Listado de Países</h1>
+  <div class="cards-container" id="cardsContainer">
+      <% paises.forEach(pais => { %>
+          <div class="card">
+              <h2><%= pais.nombre %></h2>
+              <p><strong>Capital:</strong> <%= pais.capital %></p>
+              <p><strong>Población:</strong> <%= pais.poblacion %></p>
+              <p><strong>Región:</strong> <%= pais.region %></p>
+              <img src="<%= pais.bandera %>" alt="Bandera de <%= pais.nombre %>" width="100">
+          </div>
+      <% }) %>
+  </div>
+</body>
+
+<!-- <body>
+    <div class="header">
+      <input type="text" id="searchBar" placeholder="Buscar superhéroe...">
+    </div>
+    <h1>Listado de Superhéroes</h1>
+    <div class="cards-container" id="cardsContainer">
+      <% superheroes.forEach(superHeroe => { %>
+        <div class="card">
+          <h2><%= superHeroe.nombreSuperHeroe %></h2>
+          <p><strong>Nombre Real:</strong> <%= superHeroe.nombreReal %></p>
+          <p><strong>Edad:</strong> <%= superHeroe.edad %> años</p>
+          <p><strong>Planeta de Origen:</strong> <%= superHeroe.planetaOrigen %></p>
+          <p><strong>Debilidad:</strong> <%= superHeroe.debilidad %></p>
+          <p><strong>Poderes:</strong> <%= superHeroe.poderes.join(", ") %></p>
+          <p><strong>Aliados:</strong> <%= superHeroe.aliados.join(", ") %></p>
+          <p><strong>Enemigos:</strong> <%= superHeroe.enemigos.join(", ") %></p>
+          <p><strong>Cargado por:</strong> <%= superHeroe.CargadoPor %></p>
+          <div class="actions">
+            <button class="edit-btn" onclick="modificarHeroe('<%= superHeroe.id %>')">Modificar</button>
+            <button class="delete-btn" onclick="eliminarHeroe('<%= superHeroe.id %>')">Eliminar</button>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  
+    <script>
+      // Función para buscar héroes en la barra de búsqueda
+      document.getElementById('searchBar').addEventListener('input', function () {
+        const filter = this.value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
+        
+        cards.forEach(card => {
+          const heroName = card.querySelector('h2').innerText.toLowerCase();
+          card.style.display = heroName.includes(filter) ? '' : 'none';
+        });
+      });
+  
+     
+      // Función para modificar un héroe 
+      function modificarHeroe(id) {
+        window.location.href = `./editar/${id}`;
+       // alert(`Modificar héroe con ID: ${id}`);
+      }
+  
+      // Función para eliminar un héroe 
+      function eliminarHeroe(id) {
+        const confirmar = confirm(`¿Seguro que deseas eliminar el héroe con ID: ${id}?`);
+        
+        if (confirmar) {
+          // Realizar una solicitud DELETE con fetch
+          fetch(`/api/heroes/borrarPorId/${id}`, {
+            method: 'DELETE', 
+          })
+          .then(response => {
+            if (response.ok) {
+              alert(`Héroe con ID ${id} eliminado`);
+              // Redirigir a otra página
+              window.location.href = "/api/heroes"; 
+            } else {
+              alert('Hubo un error al eliminar el héroe');
+            }
+          })
+          .catch(error => {
+            console.error('Error al realizar la solicitud DELETE:', error);
+            alert('Hubo un problema con la solicitud');
+          });
+        }
+      }
+      
+    </script>
+  </body> -->

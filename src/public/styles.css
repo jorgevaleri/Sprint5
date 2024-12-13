@@ -1,0 +1,490 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* Header, contenido, footer */
+    min-height: 100vh;
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    /* Espacio entre elementos */
+  }
+  
+  nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  nav li a:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+  }
+  
+  nav a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  nav a i {
+    font-size: 20px;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Responsivo: una sola columna */
+    padding: 20px;
+  }
+  
+  .cuerpo {
+    text-align: center;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height: 60px;
+    /* Altura fija */
+  }
+  
+  /*ESTILOS DASHBOARD.EJS*/
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .header button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .header button:hover {
+    background-color: #0056b3;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .card h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .card p {
+    margin: 8px 0;
+    color: #555;
+  }
+  
+  .card p strong {
+    color: #000;
+  }
+  
+  .card .actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+  .card button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card .edit-btn {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  .card .edit-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  .card .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .card .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /*ESTILOS ADDSUPERHERO.EJS*/
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    height: 80px;
+  }
+  
+  .form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
+  
+  /*ESTILOS EDITSUPERHEROES.EJS*/
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-top: 20px;
+  }
+  
+  .form-container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: grid;
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  .success-message {
+    color: green;
+    font-size: 1.1em;
+    text-align: center;
+  }
+  
+  .form-container input:focus,
+  .form-container textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  .form-container input[type="number"] {
+    width: 50%;
+  }
+  
+  /*NUEVOS ESTILOS*/
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  nav a i {
+    font-size: 20px;
+  }
+  
+  /* Estilo general para los botones */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animación */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Efecto de agrandamiento */
+  }
+  
+  /* Botones específicos en las tarjetas */
+  .card button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animación */
+  }
+  
+  .card .edit-btn {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  .card .edit-btn:hover {
+    background-color: #e0a800;
+    transform: scale(1.05); /* Efecto de agrandamiento */
+  }
+  
+  .card .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .card .delete-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05); /* Efecto de agrandamiento */
+  }
+  
+  /* Ajuste para separar los botones dentro de las tarjetas */
+  .card .actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+  /* Botón de formulario */
+  .form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animación */
+  }
+  
+  .form-group button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Efecto de agrandamiento */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*CSS DE PRUEBA
+  /* Estilos generales */
+  .cuerpo {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background: url('https://image.europafm.com/clipping/cmsimages01/2018/02/08/6E0AECDD-34FC-4505-924E-68B1EA37EB78/104.jpg?crop=722,722,x156,y0&width=1200&height=1200&optimize=low&format=webply') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+    position: relative;
+  }
+  
+  /* Contenedor del texto centrado */
+  .welcome-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para mejorar la visibilidad del texto */
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  /* Estilo del título */
+  .cuerpo h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* Estilo del párrafo */
+  .cuerpo p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Estilos para los botones */
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
