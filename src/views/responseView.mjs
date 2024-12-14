@@ -9,17 +9,38 @@ export function renderizarPais(pais){
     };
 
     return{
-        Nombre: pais.name.common,
-        "Capital": pais.capital ? pais.capital[0] : "No disponible",
-        "Población": pais.population,
-        "Región": pais.region,
-        "Idiomas": pais.languages ? Object.values(pais.languages).join(", ") : "No disponible",
-        "Bandera": {
-            PNG: pais.flags.png,
-            SVG: pais.flags.svg,
-            Descripción: pais.flags.alt
-        },        
-        "Cargado Por": paisConCreador.creador
+        name: {
+            common: pais.name.common,
+            official: pais.name.official,
+            nativeName: pais.name.nativeName
+        },
+        independent: pais.independent,
+        status: pais.status,
+        unMember: pais.unMember,
+        currencies: pais.currencies,
+        capital: pais.capital ? pais.capital[0] : "No disponible",
+        region: pais.region,
+        subregion: pais.subregion,
+        languages: pais.languages ? Object.values(pais.languages).join(", ") : "No disponible",
+        latlng: pais.latlng,
+        landlocked: pais.landlocked,
+        borders: pais.borders,
+        area: pais.area,
+        flag: pais.flag,
+        maps: pais.maps,
+        population: pais.population,
+        gini: pais.gini,
+        fifa: pais.fifa,
+        timezones: pais.timezones,
+        continents: pais.continents,
+        flags: {
+            png: pais.flags.png,
+            svg: pais.flags.svg,
+            alt: pais.flags.alt
+        },
+        startOfWeek: pais.startOfWeek,
+        capitalInfo: pais.capitalInfo,
+        creador: pais.creador
     };
 }
 

@@ -1,12 +1,12 @@
-<body>
+<!-- <body>
     <h1>Editar Héroe</h1>
 
     <div class="form-container">
         <form id="editarHeroeForm">
-            <input type="hidden" name="id" value="<%= datosHeroe._id %>"><!--Uso un campo oculto para simular PUT-->
+            <input type="hidden" name="id" value="<%= datosHeroe._id %>">Uso un campo oculto para simular PUT-->
             
            
-            <label for="nombreSuperHeroe">Nombre del Superhéroe:</label>
+            <!-- <label for="nombreSuperHeroe">Nombre del Superhéroe:</label>
             <input type="text" id="nombreSuperHeroe" name="nombreSuperHeroe" value="<%= datosHeroe.nombreSuperHeroe %>" required>
 
             <label for="nombreReal">Nombre Real:</label>
@@ -37,9 +37,9 @@
 
             <div id="formMessage"></div>
         </form>
-    </div>
+    </div> -->
 
-    <script>
+    <!-- <script>
         // Obténer el formulario
         const form = document.getElementById('editarHeroeForm');
         const messageDiv = document.getElementById('formMessage');
@@ -71,5 +71,33 @@
                 messageDiv.innerHTML = '<p class="error-message">Error al actualizar héroe</p>';
             } 
         });
-    </script>
-</body>
+    </script> -->
+<!--</body>-->
+
+<!--LO NUEVO-->
+<h1>Editar País</h1>
+<form action="/api/editar-pais/<%= pais._id %>" method="POST">
+    <label for="official">Nombre Oficial:</label>
+    <input type="text" id="official" name="official" value="<%= pais.name.official %>" required>
+    
+    <label for="capital">Capital:</label>
+    <input type="text" id="capital" name="capital" value="<%= pais.capital.join(', ') %>" required>
+    
+    <label for="area">Área:</label>
+    <input type="number" id="area" name="area" value="<%= pais.area %>" required>
+    
+    <label for="population">Población:</label>
+    <input type="number" id="population" name="population" value="<%= pais.population %>" required>
+    
+    <label for="gini">Índice Gini:</label>
+    <input type="text" id="gini" name="gini" value="<%= pais.gini ? pais.gini[Object.keys(pais.gini)[0]] : '' %>">
+    
+    <label for="borders">Fronteras:</label>
+    <input type="text" id="borders" name="borders" value="<%= pais.borders.join(', ') %>">
+    
+    <label for="timezones">Zonas Horarias:</label>
+    <input type="text" id="timezones" name="timezones" value="<%= pais.timezones.join(', ') %>">
+    
+    <button type="submit">Guardar Cambios</button>
+</form>
+<!--HASTA AQUI-->
